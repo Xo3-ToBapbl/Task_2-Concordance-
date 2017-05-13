@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demonstration", "Demonstration\Demonstration.csproj", "{54567E22-21EA-4CF2-BD93-1D3F36415237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcordanceLibrary", "ConcordanceLibrary\ConcordanceLibrary.csproj", "{D8C63B1F-737D-481B-9D5C-13B18476782E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{54567E22-21EA-4CF2-BD93-1D3F36415237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54567E22-21EA-4CF2-BD93-1D3F36415237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54567E22-21EA-4CF2-BD93-1D3F36415237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C63B1F-737D-481B-9D5C-13B18476782E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C63B1F-737D-481B-9D5C-13B18476782E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C63B1F-737D-481B-9D5C-13B18476782E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C63B1F-737D-481B-9D5C-13B18476782E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
