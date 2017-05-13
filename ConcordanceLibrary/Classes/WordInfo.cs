@@ -20,13 +20,7 @@ namespace ConcordanceDemonstration.Classes
                 return _count;
             }
         }
-        public int CounUp
-        {
-            set
-            {
-                _count += 1;
-            }
-        }
+        
         public ICollection<int> PageNumbers
         {
             get
@@ -50,6 +44,10 @@ namespace ConcordanceDemonstration.Classes
             _pageNumbers.Add(pageNumber);
         }
 
+        public void CountUp()
+        {
+            _count++;
+        }
         public void AddPageNumber(int pageNumber)
         {
             if (_pageNumbers.Contains(pageNumber) == false)

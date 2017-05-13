@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConcordanceDemonstration.Interfaces;
+using System.Collections;
+using System.IO;
 
 namespace ConcordanceLibrary.Classes
 {
@@ -19,19 +21,45 @@ namespace ConcordanceLibrary.Classes
                 return _items;
             }
         }
+        public IDictionary<string, IWordInfo> this[char key]
+        {
+            get
+            {
+                return _items[key];
+            }
+            set
+            {
+                _items[key] = value;
+            }
+        }
 
-        public Concordance(string letters)
+        public Concordance(string _alphabet)
         {
             _items = new Dictionary<char, IDictionary<string, IWordInfo>>();
-            foreach(char letter in letters)
+            foreach(char letter in _alphabet)
             {
-                _items[char.ToUpper(letter)] = new Dictionary<string, IWordInfo>();
+                _items[char.ToUpper(letter)] = new SortedDictionary<string, IWordInfo>();
             }
         }
 
         public void SaveToFile()
         {
-            throw new NotImplementedException();
+            StreamWriter writer = new StreamWriter("Concordance.txt", false);
+
+            writer.WriteLine("Concordance:");
+            foreach (char mainLetter in this.Items.Keys)
+            {
+                if (this[mainLetter].Values.Count != 0)
+                {
+                    writer.WriteLine(mainLetter);
+                    foreach (var items in this[mainLetter])
+                    {
+                        writer.WriteLine("{0}..........{1}: {2}",
+                            items.Key, items.Value.Count, items.Value.PageNumbersToString());
+                    }
+                }
+            }
+            writer.Close();
         }
     }
 }

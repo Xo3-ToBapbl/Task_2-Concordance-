@@ -10,8 +10,9 @@ namespace ConcordanceDemonstration.Interfaces
     {
         string Value { get; }
         int Count { get; }
-        int CounUp { set; }
+        void CountUp();
         ICollection<int> PageNumbers { get; }
         string PageNumbersToString();
+        void AddPageNumber(int pageNumber);
     }
 }
