@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demonstration
+namespace Concordance
 {
-    class Program
+    class Demonstration
     {
         static void Main(string[] args)
         {

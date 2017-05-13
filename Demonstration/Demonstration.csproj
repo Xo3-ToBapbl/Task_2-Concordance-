@@ -7,7 +7,7 @@
     <ProjectGuid>{54567E22-21EA-4CF2-BD93-1D3F36415237}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demonstration</RootNamespace>
+    <RootNamespace>Concordance</RootNamespace>
     <AssemblyName>Demonstration</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
