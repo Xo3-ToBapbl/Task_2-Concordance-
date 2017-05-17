@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ConcordanceDemonstration.Interfaces;
 using System.IO;
+using System;
 
 namespace ConcordanceLibrary.Classes
 {
@@ -39,7 +40,9 @@ namespace ConcordanceLibrary.Classes
 
         public void SaveToFile()
         {
-            StreamWriter writer = new StreamWriter("Concordance.txt", false);
+            string currentDirectoryPath = Path.GetDirectoryName(Environment.CurrentDirectory);
+            string pathToFile = Path.Combine(currentDirectoryPath, @"../Concordance.txt");
+            StreamWriter writer = new StreamWriter(pathToFile, false);
 
             writer.WriteLine("Concordance:");
             foreach (char mainLetter in this.Items.Keys)
